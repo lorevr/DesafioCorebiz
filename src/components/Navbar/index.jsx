@@ -1,3 +1,5 @@
+import React, { useContext } from 'react';
+import CartContext from '../../context/cart';
 import { Link } from 'react-router-dom';
 import { TiShoppingCart } from 'react-icons/ti';
 import { AiOutlineUser } from 'react-icons/ai';
@@ -6,6 +8,12 @@ import logo from '../../assets/logo.png';
 import { Cart, Container, HeaderContainer, LoginContainer, SearchContainer } from './styles';
 
 export const Navbar = () => {
+    const { state } = useContext(CartContext);
+
+    const totalQuantity = state.cart.reduce(
+        ( acc, product ) => acc + product.quantity, 0,
+    );
+
     return(
         <Container>
             <HeaderContainer>
@@ -28,7 +36,7 @@ export const Navbar = () => {
                 <Link to='/cart'>
                     <Cart>
                         <TiShoppingCart size={ 25 } color='#000' />
-                        <span>0</span>
+                        <span>{ totalQuantity }</span>
                     </Cart>
                 </Link>
             </HeaderContainer>

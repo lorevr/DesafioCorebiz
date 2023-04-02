@@ -4,14 +4,13 @@ export const Container = styled.main`
     width: 100%;
     margin-top: 55px;
     max-width: 958px;
-    margin: auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 `;
 
 export const List = styled.ul`
-    /* margin: 20px; */
     max-width: 958px;
     width: 100vw;
     display: grid;
