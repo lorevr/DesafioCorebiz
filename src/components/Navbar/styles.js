@@ -48,16 +48,17 @@ export const LoginContainer = styled.div`
 `;
 export const Cart = styled.div`
     display: flex;
-    align-items: center;
+    
     span {
         background-color: #DF0101;
         width: 14px;
         height: 14px;
         border-radius: 50%;
-        font-size: 0.6rem;
+        font-size: 0.7rem;
         color: #fff;
         margin-left: 0.4rem;
         text-align: center;
+        line-height: 1.3;
     }
 `;
 
