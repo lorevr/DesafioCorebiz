@@ -37,7 +37,6 @@ export const Unit = styled.li`
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    /* max-width: 240px; */
 
     img {
         max-width: 170px;

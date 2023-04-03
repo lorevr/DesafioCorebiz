@@ -6,6 +6,7 @@ import imagen from '../../assets/images-store/cinturon.png';
 
 export const Cart = () => {
     const { state } = useContext(CartContext);
+
     return (
             <Container>
                 {state.cart.map((el) => (

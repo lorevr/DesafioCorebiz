@@ -3,6 +3,7 @@ import { Container, List, Unit } from "./styles";
 import CartContext from '../../context/cart';
 import api from "../../services/api";
 import imageStore from '../../assets/images-store/cinturon.png'
+import { SaveLocalStorage } from '../../components/Store/SaveStore';
 
 
 export const Home = () => {
@@ -23,14 +24,17 @@ export const Home = () => {
         const storeIndex = copyCart.findIndex((el) => el.productId === product.productId );
         if( storeIndex >= 0 ){
             copyCart[storeIndex].quantity += 1;
+            SaveLocalStorage(copyCart);
         }
         else {
             copyCart.push({ ...product, quantity: 1 });
+            SaveLocalStorage(copyCart);
         }
         
         setState({
             cart: copyCart,
         });
+
     }
 
     return (
