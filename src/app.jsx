@@ -5,6 +5,7 @@ import { Navbar } from "./components/Navbar";
 import Slideshow from "./components/Slideshow";
 import Footer from "./components/Footer";
 import { CartContextProvider } from "./context/cart";
+import Newsletter from "./components/Newsletter";
 
 export const App = () => {
     return(
@@ -13,6 +14,7 @@ export const App = () => {
             <Navbar />
             <Slideshow />
                 <Routing />
+            <Newsletter />
             <Footer />
             </BrowserRouter>
             <GlobalStyle />
