@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const FooterContain = styled.footer`
     background-color: #1C1C1C;
     padding: 20px;
+
+    @media only screen and (max-width: 598px) {
+        padding: 10px 20px;
+    }
 `;
 
 export const Container = styled.header`
@@ -22,6 +26,15 @@ export const Container = styled.header`
     p {
         color: #fafafa;
         font-size: 0.6rem;
+    }
+
+    @media only screen and (max-width: 598px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 2fr 1fr;
+        height: 30vh;
+        gap: 10px;
+        width: 85%;
+        padding: 0;
     }
 `;
 
@@ -72,6 +85,8 @@ export const Logos = styled.div`
         width: 72px;
     }
 
-
+    @media only screen and (max-width: 598px) {
+        justify-content: space-around;
+    }
 
 `;

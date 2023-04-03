@@ -4,9 +4,18 @@ export const Container = styled.header`
     display: flex;
     justify-content: center;
     margin: 1rem;
-    `;
 
-export const HeaderContainer = styled.div`
+`;
+
+export const LinkMenu = styled.div`
+    display: none;
+
+    @media only screen and (max-width: 598px) {
+        display: block;
+    }
+`;
+
+export const NavContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,6 +24,19 @@ export const HeaderContainer = styled.div`
     img {
         width: 100px;
         height: 30px;
+    }
+
+    @media only screen and (max-width: 598px) {
+        display: grid;
+        grid-template-columns: 1fr 4fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        margin: auto;
+        width: 90%;
+
+        .linkLogo {
+            text-align: center;
+        }
+
     }
 `;
 
@@ -36,6 +58,13 @@ export const SearchContainer = styled.div`
         border: none;
         padding: 0;
     }
+
+    @media only screen and (max-width: 598px) {
+        grid-column: 1 / span 3;
+        grid-row: 2;
+        width: 90%;
+        align-self: center;
+    }
 `;
 
 export const LoginContainer = styled.div`
@@ -45,7 +74,12 @@ export const LoginContainer = styled.div`
         font-size: 0.7rem;
         text-align: left;
     } 
+
+    @media only screen and (max-width: 598px) {
+        display: none;
+    }
 `;
+
 export const Cart = styled.div`
     display: flex;
     
@@ -59,6 +93,10 @@ export const Cart = styled.div`
         margin-left: 0.4rem;
         text-align: center;
         line-height: 1.3;
+    }
+
+    @media only screen and (max-width: 598px) {
+        justify-content: flex-end;
     }
 `;
 

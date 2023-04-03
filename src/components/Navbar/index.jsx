@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import CartContext from '../../context/cart';
 import { Link } from 'react-router-dom';
 import { TiShoppingCart } from 'react-icons/ti';
-import { AiOutlineUser } from 'react-icons/ai';
+import { AiOutlineUser, AiOutlineMenu } from 'react-icons/ai';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import logo from '../../assets/logo.png';
-import { Cart, Container, HeaderContainer, LoginContainer, SearchContainer } from './styles';
+
+
+import { Cart, Container, NavContainer, LinkMenu, LoginContainer, SearchContainer } from './styles';
 
 export const Navbar = () => {
     const { state } = useContext(CartContext);
@@ -16,8 +18,11 @@ export const Navbar = () => {
 
     return(
         <Container>
-            <HeaderContainer>
-                <Link to='/'>
+            <NavContainer>
+                <LinkMenu to='/'>
+                    <AiOutlineMenu size={ 25 } />
+                </LinkMenu>
+                <Link to='/' className='linkLogo'>
                     <img src={ logo } alt='Logo' />
                 </Link>
                 <SearchContainer>
@@ -39,7 +44,7 @@ export const Navbar = () => {
                         <span>{ totalQuantity }</span>
                     </Cart>
                 </Link>
-            </HeaderContainer>
+            </NavContainer>
         </Container>
     );
 }

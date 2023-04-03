@@ -42,4 +42,17 @@ export const Container = styled.div`
         font-weight: bold;
         margin: 0;
     }
+
+    @media only screen and (max-width: 520px) {
+        height:20vh;
+        text-align: center;
+        width: 70%;
+
+        form {
+            flex-direction: column;
+            gap: 7px;
+            width: 90%;
+        }
+
+    }
 `;

@@ -61,6 +61,11 @@ export const CarouselContainer = styled.div`
         img{
             filter: brightness(30%);  
         } 
+
+        .etiquetas-carousel-caption{
+            left: 0;
+            padding-bottom: 2rem; 
+        }
     }
    
 `;

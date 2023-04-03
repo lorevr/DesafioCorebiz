@@ -25,6 +25,14 @@ export const StoreItem = styled.li`
     img {
         height: 100px;
     }
+
+    @media only screen and (max-width: 550px) {
+        padding: 10px;
+
+        img {
+            display: none;
+        }
+    }
 `;
 
 export const Info = styled.div`
